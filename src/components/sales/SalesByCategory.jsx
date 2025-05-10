@@ -9,17 +9,17 @@ import {
   Legend,
 } from "recharts";
 
-const CATEGORY_DATA = [
-  { name: "Electronics", value: 4500 },
-  { name: "Clothing", value: 3200 },
-  { name: "Home & Garden", value: 2800 },
-  { name: "Books", value: 2100 },
-  { name: "Sports & Outdoors", value: 1900 },
+const SALES_BY_CATEGORY = [
+  { name: "Electronics", value: 400 },
+  { name: "Clothing", value: 300 },
+  { name: "Home & Garden", value: 200 },
+  { name: "Books", value: 100 },
+  { name: "Others", value: 150 },
 ];
 
-const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
+const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE"];
 
-const CategoryDistributionChart = () => {
+const SalesByCategory = () => {
   return (
     <motion.div
       className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700"
@@ -28,22 +28,22 @@ const CategoryDistributionChart = () => {
       transition={{ delay: 0.3 }}
     >
       <h2 className=" text-lg font-medium mb-4 text-gray-100">
-        Category Distribution
+        Sales by Category
       </h2>
       <div className="h-80">
         <ResponsiveContainer>
           <PieChart>
             <Pie
-              data={CATEGORY_DATA}
+              data={SALES_BY_CATEGORY}
               cx={"50%"}
               cy={"50%"}
-              labelLine={false}
+              labelLine={true}
               outerRadius={80}
               label={({ name, percent }) =>
                 `${name} ${(percent * 100).toFixed(0)}%`
               }
             >
-              {CATEGORY_DATA.map((entry, index) => (
+              {SALES_BY_CATEGORY.map((entry, index) => (
                 <Cell
                   key={`Cell-${index}`}
                   fill={COLORS[index % COLORS.length]}
@@ -65,4 +65,4 @@ const CategoryDistributionChart = () => {
   );
 };
 
-export default CategoryDistributionChart;
+export default SalesByCategory;

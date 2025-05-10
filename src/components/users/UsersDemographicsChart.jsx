@@ -37,8 +37,8 @@ const UsersDemographicsChart = () => {
               cx="50%"
               cy="50%"
               outerRadius={100}
-              // fill="#8884d8"
-              // dataKey="value"
+              fill="#8884d8"
+              dataKey="value"
               label={({ name, percent }) =>
                 `${name} ${(percent * 100).toFixed(0)}%`
               }

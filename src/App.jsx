@@ -1,9 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+
+import Sidebar from "./components/Sidebar";
+
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
-import Sidebar from "./components/Sidebar";
 import UsersPage from "./pages/UsersPage";
+import SalesPage from "./pages/SalesPage";
+import OrdersPage from "./pages/OrdersPage";
+import AnaliticsPage from "./pages/AnaliticsPage";
 
 function App() {
   return (
@@ -20,6 +25,9 @@ function App() {
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/products" element={<ProductsPage />}></Route>
         <Route path="/users" element={<UsersPage />}></Route>
+        <Route path="/sales" element={<SalesPage />}></Route>
+        <Route path="/orders" element={<OrdersPage />}></Route>
+        <Route path="/analytics" element={<AnaliticsPage />}></Route>
       </Routes>
     </div>
   );
