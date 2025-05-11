@@ -62,8 +62,10 @@ const UsersTable = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
     >
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-semibold text-gray-100">Product List</h2>
+      <div className="flex justify-between items-start lg:items-center mb-6 flex-col lg:flex-row">
+        <h2 className="text-xl font-semibold text-gray-100 mb-2 lg:mb-0">
+          Product List
+        </h2>
         <div className="relative">
           <input
             type="text"
