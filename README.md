@@ -19,21 +19,23 @@ A modern and responsive admin dashboard built with <strong>React</strong>, <stro
 
 ## 📂 Project Structure
 
-src/
-├── components/ # Reusable UI components
-├── pages/ # Dashboard pages/views
-├── App.jsx # Main app component
-└── main.jsx # Entry point
+```plaintext 
+src/ 
+├── components/ # Reusable UI components 
+├── pages/ # Dashboard pages/views 
+├── App.jsx # Main app component 
+└── main.jsx # Entry point 
+```
 
 ---
 
 ## 🛠️ Getting Started
 
 ### 1. Clone the repository
-```bash git clone https://github.com/your-username/react-admin-dashboard.git cd react-admin-dashboard ```
+```git clone https://github.com/SHREY190/AdminDashboard.git cd AdminDashboard ```
 
 ### 2. Install dependencies
-```bash npm install ```
+```npm install ```
 
 ### 3. Start the development server
-```bash npm run start ```
+```npm run start ```
