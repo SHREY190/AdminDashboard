@@ -10,16 +10,18 @@ import {
 } from "recharts";
 import { motion } from "framer-motion";
 
-const DAILY_ORDERS_DATA = [
-  { date: "07/01", orders: 45 },
-  { date: "07/02", orders: 52 },
-  { date: "07/03", orders: 49 },
-  { date: "07/04", orders: 60 },
-  { date: "07/05", orders: 55 },
-  { date: "07/06", orders: 58 },
-  { date: "07/07", orders: 62 },
+const USER_RETENTION_DATA = [
+  { name: "Week 1", retention: 100 },
+  { name: "Week 2", retention: 75 },
+  { name: "Week 3", retention: 60 },
+  { name: "Week 4", retention: 50 },
+  { name: "Week 5", retention: 45 },
+  { name: "Week 6", retention: 40 },
+  { name: "Week 7", retention: 38 },
+  { name: "Week 8", retention: 35 },
 ];
-const DailyOrdersChart = () => {
+
+const UserRetention = () => {
   return (
     <motion.div
       className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700"
@@ -27,12 +29,14 @@ const DailyOrdersChart = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
     >
-      <h2 className="text-xl font-semibold text-gray-100 mb-4">Daily Orders</h2>
+      <h2 className="text-xl font-semibold text-gray-100 mb-4">
+        User Retention
+      </h2>
       <div className="h-[320px]">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={DAILY_ORDERS_DATA}>
+          <LineChart data={USER_RETENTION_DATA}>
             <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-            <XAxis dataKey="date" stroke="#9CA3AF" />
+            <XAxis dataKey="name" stroke="#9CA3AF" />
             <YAxis stroke="#9CA3AF" />
             <Tooltip
               contentStyle={{
@@ -43,7 +47,7 @@ const DailyOrdersChart = () => {
             />
             <Line
               type="monotone"
-              dataKey="orders"
+              dataKey="retention"
               stroke="#8B5CF6"
               strokeWidth={2}
               dot={{ fill: "#8B5CF6", strokeWidth: 2, r: 4 }}
@@ -57,4 +61,4 @@ const DailyOrdersChart = () => {
   );
 };
 
-export default DailyOrdersChart;
+export default UserRetention;
