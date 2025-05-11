@@ -77,7 +77,7 @@ const Sidebar = () => {
             setEffect(true);
           }}
           onAnimationComplete={() => setEffect(false)}
-          className={`${
+          className={`hidden md:inline-block ${
             effect && "animate-spin720"
           } p-2 rounded-full hover:bg-gray-700 transition-colors max-w-fit`}
         >
